@@ -1,8 +1,10 @@
 .DEFAULT_GOAL := all
 
-TEX = xelatex
+TEXINPUTS = TEXINPUTS="cv_template/:`kpsewhich -var-value TEXINPUTS`"
+TEX = $(TEXINPUTS) xelatex
 BIB = biber
 NAME = cv
+
 
 .PHONY: pdf bib all clean
 
@@ -17,3 +19,4 @@ clean:
 
 all: 
 	make pdf && make bib && make pdf
+
