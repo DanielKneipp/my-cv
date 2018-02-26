@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 
-TEXINPUTS = TEXINPUTS="cv_template/:`kpsewhich -var-value TEXINPUTS`"
+TEXINPUTS = TEXINPUTS="template/:`kpsewhich -var-value TEXINPUTS`"
 TEX = $(TEXINPUTS) xelatex
 BIB = biber
 NAME = cv
