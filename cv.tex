@@ -30,12 +30,14 @@
 % Add `lightheader` to change the dark background of the header to white
 
 \usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
+\usepackage{soul} % used on the quote
+\setstcolor{lightgray} 
 
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
 \begin{document}
 
-\header{Daniel}{ Kneipp}{Artificial Intelligence Developer} % Your name and current job title/field
+\header{Daniel}{ Kneipp}{Artificial Intelligence Developer}{``Do \st{what} the best you can, with what you have, where you are. -- Theodore Roosevelt''} % Your name and current job title/field
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
@@ -239,7 +241,7 @@ I am objective and focused on results. With entrepreneurship in my veins, I've s
 
 \section{Publications}
 
-\printbibsection{article}{Article in journals} % Print all articles from the bibliography
+\printbibsection{article}{Articles in journals} % Print all articles from the bibliography
 
 \printbibsection{inproceedings}{International Conferences/Proceedings}
 
