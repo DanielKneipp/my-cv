@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% cv-friggeri-x 1.0 (01/01/2016)
+% XeLaTeX Template
+%
+% Based on:
+% Friggeri Resume/CV
+% Version 1.2 (3/5/15)
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+% 
+% Modified by:
+% Nadorrano
+% https://github.com/Nadorrano/cv-friggeri-x
+%
+% License:
+% MIT (https://opensource.org/licenses/MIT)
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography,
+% if used, needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{cv-friggeri-x}
+% Add `a4paper` to set a4 paper size
+% Add `nocolors` to remove colors from the document
+% Add `lightheader` to change the dark background of the header to white
+
+\usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
+\usepackage{soul} % used on the quote
+\setstcolor{lightgray} 
+
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{Daniel}{ Kneipp}{Engenheiro de Software}{``Do \st{what} the best you can, with what you have, where you are. -- Theodore Roosevelt''} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{Contato}
+\pin \hfill 119, rua Gloriosa,
+Belo Horizonte, MG 
+305190-490, Brasil
+~
+% {\Large\textcolor{gray}{\Telefon}} \hfill +0 (000) 111 1111
+{\Large\textcolor{gray}{\Mobilefone}} \hfill +55 (31) 9-9605 3234
+{\Large\textcolor{gray}{\Letter}} \hfill \href{mailto:daniel.kneipp@outlook.com}{daniel.kneipp@\\outlook.com}
+~
+% \flogo \hfill \href{http://facebook.com/johnsmith}{fb://jsmith}
+% \tlogo \hfill \href{http://twitter.com/johnsmith}{@jsmith}
+\llogo \hfill \href{https://www.linkedin.com/in/daniel-kneipp/}{in://daniel-kneipp}
+\githublogo \hfill \href{https://github.com/DanielKneipp}{github://DanielKneipp}
+\gitlablogo \hfill \href{https://gitlab.com/DanielKneipp}{gitlab://DanielKneipp}
+% \vklogo \hfill \href{http://vk.com/johnsmith}{vk://johnsmith}
+% ~
+% \href{http://www.smith.com}{http://www.smith.com}
+\section{Idiomas}
+Português Brasileiro \hspace{5mm}\null
+\textit{[língua materna]}
+Inglês  \hspace{5mm}\null
+\textit{[Competência profissional]}
+\section{Programação}
+C++, Python, R, JavaScript,
+Matlab, Java, Bash
+~
+\section{Habilidades}
+Aprendizado \hspace{5mm}\null
+de Máquina: \hspace{5mm}\null
+\grade{4} 
+Otimização:     \hspace{5mm}\null  
+\grade{4}
+Visão Computacional:  \hspace{5mm}\null
+\grade{3}
+Mineração de Texto:      \hspace{5mm}\null
+\grade{2.5}
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	ABOUT ME SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{About me}
+% I am objective and focused on results. With entrepreneurship in my veins, I've spent many years studying and learning, from Convolutional Neural Networks to SWOT Analysis and Nash Equilibrium, trying to make a difference where I go. I know that it looks like a Miss Universe candidate speech asking for world peace (joke), but I really work hard to make some impact. Please, checkout my code repository (\href{https://github.com/DanielKneipp}{https://github.com/DanielKneipp}) to see some cool stuff.
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experiência}
+
+\subsection{Tempo integral}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+    {2017--Agora}
+    {Analista de pesquisa e desenvolvimento}
+    {MOST Specialist Technologies}
+    {Principais tarefas:
+    \begin{itemize}
+        \item Agrupamento e análise de registro médicos textuais;
+        \item Classificação de documentos baseado no conteúdo textual;
+        \item Implantação modular de soluções usando Docker.
+    \end{itemize}}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+% \newpage
+
+\subsection{Meio período}
+
+\begin{entrylist}
+
+\entry
+    {2016--2017}
+    {Programa de Pesquisa}% RHAE SPECIAL PROGRAM
+    {Invent Vision}
+    {Pesquisa em \textit{Deeo Learning} para aplicações de visão computacional. Implementação de um conjunto de ferramentas para acelerar o desenvolvimento (incluindo geração de \textit{datasets} sintéticos) e implantação de classificadores de imagens. Implantação de aplicação em sistemas embarcados (NVIDIA Jetson). Nome do projeto: Sistema inteligente de monitoramento por imagens georreferenciadas para aplicação em ferrovias de carga.}
+
+\entry
+    {2015--2016}
+    {Estagiário}
+    {Invent Vision}
+    {Pesquisa e implantação de sistemas de computação distribuído (baseados em Hadoop e Spark), desenvolvendo aplicações simples para serem executados em \textit{clusters}.}
+
+\entry
+    {2013--2014}
+    {Iniciação Científica}
+    {Invent Vision}
+    {Desenvolvimento de um eficiente detector de fadiga baseado em expressões faciais (usando algoritmos de rastreamento de face e olhos). Implantação em computadores x86 e sistemas embarcados ARM. Nome do projeto: Sistema para inspeção fotométrica e regulagem automática de faróis de veículos automotores.}
+
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Educação}
+
+\begin{entrylist}
+
+\entry
+    {2016--2018}
+    {Mestrado}
+    {Universidade Federal de Minas Gerais (UFMG)}
+    {\emph{Ciência da Computação}\\
+    Minha área de pesquisa é computação com DNA. O objetivo é propor circuitos químicos funcionais para tarefas de classificação usando a teoria das Redes de Reações Químicas como a linguagem de programação e fragmentos de DNA como o \textit{hardware}. Eu sou um membro do laboratório NanoComp (\href{http://www.nanocomp.dcc.ufmg.br/}{http://www.nanocomp.dcc.ufmg.br/}).}
+
+\entry
+    {2012--2015}
+    {Bacharelado}
+    {Universidade Federal de Vi\c cosa (UFV)}
+    {\emph{Ciência da Computação}\\
+    Recebi a medalha Presidente Bernardes pela minha excelência acadêmica. No meu trabalho de conclusão de curso desenvolvi um algorítimo baseado em um meta-heurística bio-inspirada para resolver um problema de otimização combinatório. Título: A Genetic Algorithm for Multi-Component Optimization Problems: The Case of the Travelling Thief Problem.}
+
+
+\entry
+    {2010--2011}
+    {Técnico}
+    {Escola SENAI}
+    {\emph{Informática}\\
+    Estudei o básico sobre arquitetura de computadores, desenvolvimento de software e infraestrutura de rede.}
+
+% \entry
+%     {}
+%     {\\Independent {\normalfont Courses}}
+%     {}
+%     {\begin{itemize}%
+%         \item Deep Learning -- \textit{Google} | \textit{Udacity}%
+%         \item Machine Learning -- \textit{Stanford University} | \textit{Coursera}%
+%     \end{itemize}}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Condecoreações}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+    {2015}
+    {Medalha Presidente Bernardes}
+    {Universidade Federal de Vi\c cosa}
+    {A medalha Presidente Bernardes é entregue a estudantes com excelência acadêmica na graduação.}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Habilidades de comunicação}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2017}
+{Apresentação oral}
+{Conferência Evostar}
+{Apresentei a pesquisa que conduzi para obter o título de Bacharel. O tema da pesquisa foi o uso de Algoritmos Genéticos para resolver um problema combinatório multicomponente.}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{interests}
+
+% \textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Publicações}
+
+\printbibsection{article}{Artigos em \textit{journals}} % Print all articles from the bibliography
+
+\printbibsection{inproceedings}{Conferências internacionais}
+
+% \printbibsection{book}{books} % Print all books from the bibliography
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=bibheading]
+% \end{refsection}
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=bibheading]
+% \end{refsection}
+
+% \printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+
+% \printbibsection{report}{research reports} % Print all research reports from the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
