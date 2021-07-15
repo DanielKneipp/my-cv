@@ -9,7 +9,7 @@
 % Original author:
 % Adrien Friggeri (adrien@friggeri.net)
 % https://github.com/afriggeri/CV
-% 
+%
 % Modified by:
 % Nadorrano
 % https://github.com/Nadorrano/cv-friggeri-x
@@ -31,7 +31,9 @@
 
 \usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
 \usepackage{soul} % used on the quote
-\setstcolor{lightgray} 
+\usepackage[none]{hyphenat}
+\usepackage{afterpage}
+\setstcolor{lightgray}
 
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
@@ -46,7 +48,7 @@
 \begin{aside} % In the aside, each new line forces a line break
 \section{Contact}
 \pin \hfill 119 Gloriosa St,
-Belo Horizonte, MG 
+Belo Horizonte, MG
 305190-490, Brazil
 ~
 % {\Large\textcolor{gray}{\Telefon}} \hfill +0 (000) 111 1111
@@ -73,9 +75,9 @@ C++, Go, R
 Cloud Infrastructure: \hspace{5mm}\null
 \grade{4}
 DevOps:               \hspace{5mm}\null
-\grade{4} 
+\grade{4}
 Machine Learning:     \hspace{5mm}\null
-\grade{3} 
+\grade{3}
 Computer Vision:      \hspace{5mm}\null
 \grade{3}
 Back-end Dev:         \hspace{5mm}\null
@@ -122,8 +124,10 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
     {MOST Specialist Technologies}
     {\begin{itemize}
         \item Developed ML algorithms for document detection in images and ID recognition (demo available at \href{mostqi.com}{mostqi.com});
-        \item Developed back-end services in Python and Go to serve real-time inferences.
+        \item Developed back-end services in Python and Go to serve real-time inferences;
         \item Worked with document classification and clustering using its textual content;
+        \item Used Data Engineering and Data Visualization concepts for data preparation, cleaning and labelling unification;
+        \item Developed tools for training management and performance monitoring regarding accuracy and hyper-parametrization.
     \end{itemize}}
 
 %------------------------------------------------
@@ -140,7 +144,7 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
     {2016--2017}
     {Computer Vision Researcher}% RHAE SPECIAL PROGRAM
     {Invent Vision}
-    {Deep Learning research for Computer Vision applications. Implemented a set of tools to speedup the development (including synthetic dataset generation) and deployment of image classifiers in embedded systems (NVIDIA Jetson).}
+    {Deep Learning research for Computer Vision applications. Implemented a set of tools to speedup the development (e.g. synthetic dataset generation, dataset management, etc.) and deployed image classifiers in embedded systems (NVIDIA Jetson).}
 
 \entry
     {2015--2016}
@@ -165,19 +169,22 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
+\afterpage{%
+\newgeometry{left=2.0cm,top=1.0cm,right=2.0cm,bottom=1.0cm,nohead,nofoot}
+
 \section{Education}
 
 \begin{entrylist}
 
-\entry
+\entrywide
     {2016--2018}
     {Master {\normalfont of Science}}
     {Federal University of Minas Gerais (UFMG)}
-    {\emph{Comptuer Science} -- 
+    {\emph{Comptuer Science} --
     \footnotesize{NanoComp lab. member (\href{http://www.nanocomp.dcc.ufmg.br/}{http://www.nanocomp.dcc.ufmg.br/}).}\\
     \normalsize{My research area was DNA Computing. The objective was to propose functional chemical circuits for classification tasks using Chemical Reaction Networks theory as a programming language and DNA strands as the hardware. One of the results of my research is a R package to simulate logic circuits based on DNA. See \href{https://github.com/DanielKneipp/DNAr}{https://github.com/DanielKneipp/DNAr} to know more.}}
 
-\entry
+\entrywide
     {2012--2015}
     {Bachelor {\normalfont of Science}}
     {Federal University of Vi\c cosa (UFV)}
@@ -209,23 +216,33 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Awards}
+\section{Awards and certifications}
 
 \begin{entrylist}
 
 %------------------------------------------------
 
-\entry
-    {2015}
-    {University Medal}
-    {Federal University of Vi\c cosa}
-    {The \textit{Presidente Bernardes} Medal is awarded to students with academic excellence.}
+\entrywide
+    {2021}
+    {AWS Certified DevOps Engineer – Professional}
+    {Amazon Web Services}
 
-\entry
+\entrywide
+    {2020}
+    {Google Cloud Platform Fundamentals: Core Infrastructure}
+    {Coursera}
+
+\entrywide
     {2019}
     {Honorable Mention}
     {Symposium on Circuits and Systems Design}
     {Award given on the 32nd SBCCI for the work titled "DNAr-Logic DNA circuit design library in R language for molecular computing".}
+
+\entrywide
+    {2015}
+    {University Medal}
+    {Federal University of Vi\c cosa}
+    {The \textit{Presidente Bernardes} Medal is awarded to students with academic excellence.}
 
 %------------------------------------------------
 
@@ -241,7 +258,7 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
 
 %------------------------------------------------
 
-\entry
+\entrywide
 {2017}
 {Oral Presentation}
 {Evostar Conference}
@@ -286,5 +303,9 @@ Currently I'm working as a Site Reliability Engineer (SRE), designing cloud arch
 % \printbibsection{report}{research reports} % Print all research reports from the bibliography
 
 %----------------------------------------------------------------------------------------
+
+\clearpage
+\restoregeometry
+}
 
 \end{document}
