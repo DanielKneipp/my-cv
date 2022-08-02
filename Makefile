@@ -20,7 +20,7 @@ docker-build:
 	docker build -t danielkneipp/xelatex .
 
 docker-run:
-	docker run --rm -v $(shell pwd):/data danielkneipp/xelatex make $(TARGETS)
+	docker run --rm -v $(shell pwd):/data --platform linux/amd64 danielkneipp/xelatex make $(TARGETS)
 
 clean:
 	/usr/bin/env bash scripts/clean.sh $(NAME)
