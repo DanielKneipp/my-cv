@@ -27,4 +27,3 @@ clean:
 
 all: 
 	make pdf && make bib && make pdf
-
