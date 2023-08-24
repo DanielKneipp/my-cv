@@ -1,8 +1,11 @@
 Build pdf with a container
 
 ```bash
-make docker-build 
+make docker-build
 TARGETS=all make docker-run
+# TARGETS=bib make docker-run
+# TARGETS=pdf make docker-run
+# TARGETS=letter make docker-run
 ```
 
 Build and develop with [devcontainers](https://code.visualstudio.com/docs/remote/containers)
