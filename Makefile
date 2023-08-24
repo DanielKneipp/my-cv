@@ -12,6 +12,9 @@ pdf: cv.tex cv-br.tex
 	$(TEX) $(NAME)
 	$(TEX) $(NAME_BR)
 
+letter: letter.tex
+	$(TEX) letter
+
 bib: cv.tex cv-br.tex bibliography.bib
 	$(BIB) $(NAME)
 	$(BIB) $(NAME_BR)
@@ -25,5 +28,5 @@ docker-run:
 clean:
 	/usr/bin/env bash scripts/clean.sh $(NAME)
 
-all: 
+all:
 	make pdf && make bib && make pdf
